@@ -2,6 +2,11 @@
 * {
   font-family: "Raleway", sans-serif;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --main-color: #0065fc;
@@ -16,6 +21,7 @@
 body {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .main-container {
@@ -95,8 +101,8 @@ a {
 .populaires-cards img {
   width: 33%;
   height: 136px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .populaires-cards .card-content {
@@ -173,8 +179,9 @@ a {
 }
 /*----------------------fin nav-------------------------------------*/
 /*----------------------header-------------------------------------*/
-header h2 {
+header h1 {
   font-weight: 700;
+  font-size: 22px;
   margin: 2rem 0 0 0;
 }
 header p {
@@ -189,7 +196,7 @@ form {
 }
 form i {
   padding: 1rem;
-  border-radius: 50px 0 0 50px;
+  border-radius: 15px 0 0 15px;
   border: 1px solid var(--main-bg-color);
   background-color: var(--main-bg-color);
   margin: 0;
@@ -205,8 +212,8 @@ form input {
   margin: 0;
 }
 form input[type="text"] {
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid var(--main-bg-color);
+  border-bottom: 1px solid var(--main-bg-color);
   font-weight: 700;
 }
 
@@ -215,7 +222,7 @@ form input::placeholder {
 }
 
 form input[type="submit"] {
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 15px 15px 0;
   background-color: var(--main-color);
   color: #ffffff;
   font-weight: 700;
@@ -247,9 +254,12 @@ form input[type="submit"]:hover {
 
 #filter button {
   background-color: #fff;
-  border: 1px solid #d9d9d9;
+  border: 2px solid #d9d9d9;
   border-radius: 25px;
-  padding: 1rem;
+  margin-right: 20px;
+  height: 50px;
+  padding: 0 1rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -263,8 +273,7 @@ form input[type="submit"]:hover {
 
 #info {
   display: flex;
-  align-items: center; /* Aligne verticalement l'icône et le texte */
-  gap: 1rem; /* Espace entre icône et texte */
+  align-items: center;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -279,6 +288,7 @@ form input[type="submit"]:hover {
   border: 1px solid var(--main-bg-color);
   border-radius: 50%;
   font-size: 0.8rem;
+  margin-right: 1rem;
 }
 
 #info p {
@@ -293,19 +303,19 @@ form input[type="submit"]:hover {
 
 .cards-container {
   display: flex;
-  flex-wrap: wrap; /* Permet le retour à la ligne */
+  flex-wrap: wrap;
   margin-top: 33px;
   gap: 1rem;
 }
 .cards-container a {
-  flex: 1 1 calc(30% - 2rem); /* 3 cartes par ligne - ajustable */
+  flex: 1 1 calc(30% - 2rem);
 }
 .cards {
   background-color: #ffffff;
-  padding: 0.3rem;
+  padding: 5px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+  border-radius: 20px;
 
   max-width: 100%;
   cursor: pointer;
@@ -315,7 +325,7 @@ form input[type="submit"]:hover {
   width: 100%;
   height: 125px;
   object-fit: cover;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 15px 15px 0 0;
 }
 .cards-txt {
   padding: 0.5rem;
@@ -331,13 +341,13 @@ form input[type="submit"]:hover {
   font-weight: 700;
   margin-top: 33px;
   border: none;
-  font-size: 1em;
+  font-size: 18px;
   cursor: pointer;
 }
 /*----------------------fin hébergement-------------------------------------*/
 /*----------------------section activité-------------------------------------*/
 #activite-marseille {
-  margin-top: 2rem;
+  margin-top: 30px;
 }
 
 #activite-marseille h2 {
@@ -349,7 +359,7 @@ form input[type="submit"]:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: space-between; /* ou center, flex-start, etc. */
+  justify-content: space-between;
 }
 #activite-container a {
   flex: 0 1 calc(25% - 1.5rem);
@@ -359,7 +369,6 @@ form input[type="submit"]:hover {
   flex-direction: column;
   background-color: #ffffff;
   margin: 33px 0 0 0;
-  padding: 0.3rem;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
@@ -384,13 +393,18 @@ form input[type="submit"]:hover {
 footer {
   margin-top: 33px;
   background-color: var(--main-bg-color);
-  padding: 1rem;
+  padding: 20px;
   display: flex;
   justify-content: flex-start;
 }
 .list-container {
   width: 33.33%;
-  padding: 1rem;
+}
+
+.list-container h3 {
+  font-size: 18px;
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 .list-container ul {
   display: flex;
@@ -468,7 +482,12 @@ footer {
     margin: 0;
   }
   .main-container {
-    padding: 0 1rem;
+    padding: 0;
+    overflow: hidden;
+  }
+  .section-title {
+    font-size: 22px;
+    margin: 1rem 0;
   }
   /* ..........................fin main................................. */
   /* ............................nav................................. */
@@ -479,35 +498,55 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-bottom: 1rem;
+    padding: 0 0 1rem 0;
   }
   .logo {
     padding: 1rem;
-    height: 35px;
+
     align-items: center;
     justify-content: center;
     padding-bottom: 3rem;
   }
 
+  .logo img {
+    height: 20px;
+    width: auto;
+  }
   .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .main-nav ul li {
+    height: 100%;
+    width: 50%;
   }
 
   .main-nav ul li a {
     height: 35px;
   }
+  .main-nav ul li a:hover {
+    color: var(--main-color);
+    border-top: #ffffff 0px;
+    border-bottom: var(--main-color) solid 2px;
+  }
   /* ..........................fin nav................................. */
   /* ...........................header................................. */
   header {
     width: 100%;
+    padding: 0 1rem;
   }
   form {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0;
     margin-bottom: 2rem;
     width: 100%;
+    max-width: 100%;
   }
   form i {
     padding: 1rem;
@@ -519,6 +558,7 @@ footer {
 
   form input[type="text"] {
     flex: 1;
+    min-width: 0;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
     font-weight: 700;
@@ -557,6 +597,9 @@ footer {
   .filter-container-btn button {
     width: 45%;
   }
+  #filter button {
+    margin-right: 0;
+  }
 
   /* .........................fin header................................. */
   /* ................section hebergements et populaires................................. */
@@ -572,9 +615,15 @@ footer {
   }
   .show-more {
     background-color: transparent;
+    margin-top: 15px;
+  }
+  .cards-container {
+    gap: 0;
+    margin-top: 0;
   }
   .cards-container a {
     min-width: 80%;
+    margin-top: 15px;
   }
 
   .populaires-cards {
@@ -582,8 +631,12 @@ footer {
     justify-content: center;
   }
 
-  .populaires-cards a {
+  a {
     min-width: 100%;
+  }
+
+  .populaires-cards .card {
+    margin-top: 15px;
   }
 
   /* ..............fin hebergements et populaires................................. */
@@ -593,12 +646,14 @@ footer {
     padding: 30px;
   }
   #activite-container {
-    justify-content: center;
-    margin-top: 33px;
+    gap: 0;
   }
   #activite-container a {
     min-width: 100%;
     margin: 0;
+  }
+  .cards-activite {
+    margin: 15px 0 0 0;
   }
 
   /* ..............fin activite marseille................................. */
@@ -609,5 +664,8 @@ footer {
   }
   .list-container {
     width: 100%;
+  }
+  .list-container:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
