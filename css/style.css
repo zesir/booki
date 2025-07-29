@@ -313,7 +313,7 @@ form input[type="submit"]:hover {
 .cards {
   background-color: #ffffff;
   padding: 5px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 
@@ -343,6 +343,7 @@ form input[type="submit"]:hover {
   border: none;
   font-size: 18px;
   cursor: pointer;
+  background: none;
 }
 /*----------------------fin hébergement-------------------------------------*/
 /*----------------------section activité-------------------------------------*/
@@ -369,9 +370,9 @@ form input[type="submit"]:hover {
   flex-direction: column;
   background-color: #ffffff;
   margin: 33px 0 0 0;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+  border-radius: 20px;
   overflow: hidden;
   margin-bottom: 1.5rem;
 
@@ -387,6 +388,7 @@ form input[type="submit"]:hover {
   padding-left: 1rem;
   font-weight: 700;
   font-size: 1em;
+  min-height: 35px;
 }
 /*----------------------fin activité-------------------------------------*/
 /*-------------------------footer-------------------------------------*/
@@ -550,7 +552,7 @@ footer {
   }
   form i {
     padding: 1rem;
-    border-radius: 50px 0 0 50px;
+
     border: 1px solid var(--main-bg-color);
     background-color: var(--main-bg-color);
     margin: 0;
@@ -559,8 +561,8 @@ footer {
   form input[type="text"] {
     flex: 1;
     min-width: 0;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
     font-weight: 700;
   }
 
