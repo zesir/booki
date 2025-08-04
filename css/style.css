@@ -26,7 +26,7 @@ body {
 
 .main-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1440px; /* empeche le resize du site au dessus de 1440px    */
   padding: 0 50px;
   box-sizing: border-box;
 }
@@ -529,6 +529,7 @@ footer {
 
   .main-nav ul li a {
     height: 35px;
+    border-bottom: var(--main-bg-color) solid 2px;
   }
   .main-nav ul li a:hover {
     color: var(--main-color);
@@ -562,6 +563,7 @@ footer {
     flex: 1;
     min-width: 0;
     border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
     border-bottom: 1px solid var(--main-bg-color);
     font-weight: 700;
   }
